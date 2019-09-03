@@ -4,7 +4,7 @@ Duplicates an invoice
 
 ## Request
 
-`POST https://api.zipbooks.com/v2/invoices/662/duplicate`
+`POST https://api.zipbooks.com/v2/invoices/1203/duplicate`
 
 ## Response
 
@@ -18,7 +18,7 @@ Duplicates an invoice
       "accept-credit-cards": "boolean",
       "accept-paypal": "boolean",
       "archived-at": null,
-      "created-at": "1986-07-11T11:00:00Z",
+      "created-at": "datetime",
       "currency-code": "string",
       "date": "string",
       "days-outstanding": null,
@@ -34,19 +34,19 @@ Duplicates an invoice
       "terms": "string",
       "title": "string",
       "total": "string",
-      "updated-at": "1986-07-11T11:00:00Z"
+      "updated-at": "datetime"
     },
-    "id": "663",
+    "id": "1205",
     "relationships": {
       "account": {
         "data": {
-          "id": "1887",
+          "id": "2640",
           "type": "account"
         }
       },
       "contact": {
         "data": {
-          "id": "1083",
+          "id": "1631",
           "type": "contact"
         }
       },
@@ -56,18 +56,18 @@ Duplicates an invoice
       "line-items": {
         "data": [
           {
-            "id": "1492",
+            "id": "2495",
             "type": "line-item"
           },
           {
-            "id": "1494",
+            "id": "2496",
             "type": "line-item"
           }
         ]
       },
       "logo-cloud-file": {
         "data": {
-          "id": "4462",
+          "id": "6210",
           "type": "cloud-file"
         }
       },
@@ -86,7 +86,7 @@ Duplicates an invoice
         "archived-at": null,
         "city": "string",
         "country": "string",
-        "created-at": "1986-07-11T11:00:00Z",
+        "created-at": "datetime",
         "department": "string",
         "display-name": "string",
         "email": "string",
@@ -106,14 +106,14 @@ Duplicates an invoice
         "suggested-next-invoice-number": "string",
         "unbilled-journal-entry-lines": "boolean",
         "unbilled-time-entries": "boolean",
-        "updated-at": "1986-07-11T11:00:00Z",
+        "updated-at": "datetime",
         "website": "string"
       },
-      "id": "1083",
+      "id": "1631",
       "relationships": {
         "account": {
           "data": {
-            "id": "1887",
+            "id": "2640",
             "type": "account"
           }
         },
@@ -131,7 +131,7 @@ Duplicates an invoice
     },
     {
       "attributes": {
-        "created-at": "1986-07-11T11:00:00Z",
+        "created-at": "datetime",
         "discount": "string",
         "end-date": null,
         "name": "string",
@@ -141,17 +141,17 @@ Duplicates an invoice
         "rate": "string",
         "start-date": null,
         "taxes": [],
-        "type": "Tempore soluta quo?",
-        "updated-at": "1986-07-11T11:00:00Z"
+        "type": "Ipsa iusto nam vero.",
+        "updated-at": "datetime"
       },
-      "id": "1492",
+      "id": "2495",
       "relationships": {
         "chart-account": {
           "data": null
         },
         "line-itemable": {
           "data": {
-            "id": "663",
+            "id": "1205",
             "type": "invoice"
           }
         }
@@ -160,7 +160,7 @@ Duplicates an invoice
     },
     {
       "attributes": {
-        "created-at": "1986-07-11T11:00:00Z",
+        "created-at": "datetime",
         "discount": "string",
         "end-date": null,
         "name": "string",
@@ -170,17 +170,17 @@ Duplicates an invoice
         "rate": "string",
         "start-date": null,
         "taxes": [],
-        "type": "Accusamus voluptas recusandae error ipsum.",
-        "updated-at": "1986-07-11T11:00:00Z"
+        "type": "Ipsum qui sunt.",
+        "updated-at": "datetime"
       },
-      "id": "1494",
+      "id": "2496",
       "relationships": {
         "chart-account": {
           "data": null
         },
         "line-itemable": {
           "data": {
-            "id": "663",
+            "id": "1205",
             "type": "invoice"
           }
         }
@@ -191,7 +191,7 @@ Duplicates an invoice
       "attributes": {
         "category": null,
         "content-type": "string",
-        "created-at": "1986-07-11T11:00:00Z",
+        "created-at": "datetime",
         "download-url": null,
         "filename": "string",
         "height": "integer",
@@ -199,10 +199,10 @@ Duplicates an invoice
         "is-uploaded": "boolean",
         "size": null,
         "token": "string",
-        "updated-at": "1986-07-11T11:00:00Z",
+        "updated-at": "datetime",
         "width": "integer"
       },
-      "id": "4462",
+      "id": "6210",
       "type": "cloud-file"
     }
   ],
@@ -221,7 +221,7 @@ curl -X POST \
      
      -H 'content-type: application/vnd.api+json' \
      
-     -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWxsZXIiOm51bGwsInN1YiI6IjE1NTgiLCJpc3MiOiJodHRwczpcL1wvYXBwLnppcGJvb2tzLmNvbVwvdjJcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNTY3NTMzMjk0LCJleHAiOjE1ODMwODUyOTQsIm5iZiI6MTU2NzUzMzI5NCwianRpIjoiZGI4YjBhZWItOTJiZS00NjUxLWExYzYtZWYwZTIxNDdmODQ4Iiwic3RlYWx0aCI6ImZhbHNlIiwiYWNjb3VudF9pZCI6MTg4NywidXBkYXRlZF9hdCI6IjIwMTktMDktMDMgMTc6NTQ6NTRaIn0.sb2KLjXJqcov0-n-_cDgsC_2U5c798ob9nuEPfIjEss' \
+     -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWxsZXIiOm51bGwsInN1YiI6IjE4OTMiLCJpc3MiOiJodHRwczpcL1wvYXBwLnppcGJvb2tzLmNvbVwvdjJcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNTY3NTQwNjAzLCJleHAiOjE1ODMwOTI2MDMsIm5iZiI6MTU2NzU0MDYwMywianRpIjoiZGIwZDUzYWUtY2JlYi00NWNiLWIxYTgtZWQwNmM1MWMwZjZjIiwic3RlYWx0aCI6ImZhbHNlIiwiYWNjb3VudF9pZCI6MjY0MCwidXBkYXRlZF9hdCI6IjIwMTktMDktMDMgMTk6NTY6NDNaIn0.KohmJxtu0VHvWpkz1CtjB_SBwTvx8yKMqP3SYY6D5uw' \
      
-     "https://api.zipbooks.com/v2/invoices/662/duplicate"
+     "https://api.zipbooks.com/v2/invoices/1203/duplicate"
 ```

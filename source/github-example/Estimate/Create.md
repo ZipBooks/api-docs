@@ -16,7 +16,7 @@
   "data": {
     "attributes": {
       "archived-at": null,
-      "created-at": "1986-07-11T11:00:00Z",
+      "created-at": "datetime",
       "currency-code": "string",
       "date": "string",
       "days-out": "integer",
@@ -32,33 +32,33 @@
       "terms": null,
       "title": null,
       "total": "string",
-      "updated-at": "1986-07-11T11:00:00Z"
+      "updated-at": "datetime"
     },
-    "id": "87",
+    "id": "105",
     "relationships": {
       "account": {
         "data": {
-          "id": "2056",
+          "id": "2013",
           "type": "account"
         }
       },
       "contact": {
         "data": {
-          "id": "1198",
+          "id": "1244",
           "type": "contact"
         }
       },
       "line-items": {
         "data": [
           {
-            "id": "1687",
+            "id": "1815",
             "type": "line-item"
           }
         ]
       },
       "logo-cloud-file": {
         "data": {
-          "id": "4871",
+          "id": "4869",
           "type": "cloud-file"
         }
       }
@@ -74,7 +74,7 @@
         "archived-at": null,
         "city": "string",
         "country": "string",
-        "created-at": "1986-07-11T11:00:00Z",
+        "created-at": "datetime",
         "department": "string",
         "display-name": "string",
         "email": "string",
@@ -94,14 +94,14 @@
         "suggested-next-invoice-number": "string",
         "unbilled-journal-entry-lines": "boolean",
         "unbilled-time-entries": "boolean",
-        "updated-at": "1986-07-11T11:00:00Z",
+        "updated-at": "datetime",
         "website": "string"
       },
-      "id": "1198",
+      "id": "1244",
       "relationships": {
         "account": {
           "data": {
-            "id": "2056",
+            "id": "2013",
             "type": "account"
           }
         },
@@ -119,7 +119,7 @@
     },
     {
       "attributes": {
-        "created-at": "1986-07-11T11:00:00Z",
+        "created-at": "datetime",
         "discount": null,
         "end-date": null,
         "name": "string",
@@ -130,16 +130,16 @@
         "start-date": null,
         "taxes": null,
         "type": "time-entry",
-        "updated-at": "1986-07-11T11:00:00Z"
+        "updated-at": "datetime"
       },
-      "id": "1687",
+      "id": "1815",
       "relationships": {
         "chart-account": {
           "data": null
         },
         "line-itemable": {
           "data": {
-            "id": "87",
+            "id": "105",
             "type": "estimate"
           }
         }
@@ -150,7 +150,7 @@
       "attributes": {
         "category": null,
         "content-type": "string",
-        "created-at": "1986-07-11T11:00:00Z",
+        "created-at": "datetime",
         "download-url": null,
         "filename": "string",
         "height": "integer",
@@ -158,10 +158,10 @@
         "is-uploaded": "boolean",
         "size": null,
         "token": "string",
-        "updated-at": "1986-07-11T11:00:00Z",
+        "updated-at": "datetime",
         "width": "integer"
       },
-      "id": "4871",
+      "id": "4869",
       "type": "cloud-file"
     }
   ],
@@ -180,7 +180,7 @@ curl -X POST \
      
      -H 'content-type: application/vnd.api+json' \
      
-     -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWxsZXIiOm51bGwsInN1YiI6IjE2NjkiLCJpc3MiOiJodHRwczpcL1wvYXBwLnppcGJvb2tzLmNvbVwvdjJcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNTY3NTMzMzI1LCJleHAiOjE1ODMwODUzMjUsIm5iZiI6MTU2NzUzMzMyNSwianRpIjoiMzZmNTk1MWYtZTg4ZS00ZTRjLTg3YzktYjc2MDdkZjMzODY0Iiwic3RlYWx0aCI6ImZhbHNlIiwiYWNjb3VudF9pZCI6MjA1NiwidXBkYXRlZF9hdCI6IjIwMTktMDktMDMgMTc6NTU6MjVaIn0.tgYb3mCuM1mmeH-xuCSufkHvJyUynAZR4EMz36Cwo8A' \
+     -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWxsZXIiOm51bGwsInN1YiI6IjE2MTUiLCJpc3MiOiJodHRwczpcL1wvYXBwLnppcGJvb2tzLmNvbVwvdjJcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNTY3NTM5NjM2LCJleHAiOjE1ODMwOTE2MzYsIm5iZiI6MTU2NzUzOTYzNiwianRpIjoiYjFhYTc4ZTYtODk5Ny00YzBiLThjODgtYzQ3NDRiZjhlYzc4Iiwic3RlYWx0aCI6ImZhbHNlIiwiYWNjb3VudF9pZCI6MjAxMywidXBkYXRlZF9hdCI6IjIwMTktMDktMDMgMTk6NDA6MzZaIn0.PjlBH16jy82MRXkQ90CWZ8SCudotGaB1wfcLxLRGOZE' \
      
      "https://api.zipbooks.com/v2/estimates"
 ```

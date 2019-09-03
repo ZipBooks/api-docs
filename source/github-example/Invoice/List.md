@@ -1,20 +1,15 @@
-# Invoice
+# List Invoice
 
-# Invoice Index
 
-```shell
-curl -X GET \
-     
-     -H 'accept: application/vnd.api+json' \
-     
-     -H 'content-type: application/vnd.api+json' \
-     
-     -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWxsZXIiOm51bGwsInN1YiI6IjE1NjMiLCJpc3MiOiJodHRwczpcL1wvYXBwLnppcGJvb2tzLmNvbVwvdjJcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNTY3NTMzMjk1LCJleHAiOjE1ODMwODUyOTUsIm5iZiI6MTU2NzUzMzI5NSwianRpIjoiNDE3M2NjMzktMmJiMC00YWNhLTllZjYtMTE0ZGM1NDg1ZjVjIiwic3RlYWx0aCI6ImZhbHNlIiwiYWNjb3VudF9pZCI6MTg5MiwidXBkYXRlZF9hdCI6IjIwMTktMDktMDMgMTc6NTQ6NTVaIn0.2iqsLDuUvtP8XSu8VyjrjcR1HrFKHDm91yXtXnm9oQM' \
-     
-     "https://api.zipbooks.com/v2/invoices"
-```
 
-> Example Response:
+## Request
+
+`GET https://api.zipbooks.com/v2/invoices`
+
+## Response
+
+- **Status:** 200 OK
+- **Body:**
 
 ```json
 {
@@ -24,7 +19,7 @@ curl -X GET \
         "accept-credit-cards": "boolean",
         "accept-paypal": "boolean",
         "archived-at": null,
-        "created-at": "1986-07-11T11:00:00Z",
+        "created-at": "datetime",
         "currency-code": "string",
         "date": "string",
         "days-outstanding": null,
@@ -40,19 +35,19 @@ curl -X GET \
         "terms": "string",
         "title": "string",
         "total": "string",
-        "updated-at": "1986-07-11T11:00:00Z"
+        "updated-at": "datetime"
       },
-      "id": "666",
+      "id": "1202",
       "relationships": {
         "account": {
           "data": {
-            "id": "1892",
+            "id": "2639",
             "type": "account"
           }
         },
         "contact": {
           "data": {
-            "id": "1084",
+            "id": "1630",
             "type": "contact"
           }
         },
@@ -62,18 +57,18 @@ curl -X GET \
         "line-items": {
           "data": [
             {
-              "id": "1500",
+              "id": "2490",
               "type": "line-item"
             },
             {
-              "id": "1501",
+              "id": "2489",
               "type": "line-item"
             }
           ]
         },
         "logo-cloud-file": {
           "data": {
-            "id": "4478",
+            "id": "6207",
             "type": "cloud-file"
           }
         },
@@ -93,7 +88,7 @@ curl -X GET \
         "archived-at": null,
         "city": "string",
         "country": "string",
-        "created-at": "1986-07-11T11:00:00Z",
+        "created-at": "datetime",
         "department": "string",
         "display-name": "string",
         "email": "string",
@@ -113,14 +108,14 @@ curl -X GET \
         "suggested-next-invoice-number": "string",
         "unbilled-journal-entry-lines": "boolean",
         "unbilled-time-entries": "boolean",
-        "updated-at": "1986-07-11T11:00:00Z",
+        "updated-at": "datetime",
         "website": "string"
       },
-      "id": "1084",
+      "id": "1630",
       "relationships": {
         "account": {
           "data": {
-            "id": "1892",
+            "id": "2639",
             "type": "account"
           }
         },
@@ -140,7 +135,7 @@ curl -X GET \
     },
     {
       "attributes": {
-        "created-at": "1986-07-11T11:00:00Z",
+        "created-at": "datetime",
         "discount": "string",
         "end-date": "string",
         "name": "string",
@@ -150,17 +145,17 @@ curl -X GET \
         "rate": "string",
         "start-date": "string",
         "taxes": [],
-        "type": "Est veniam magni quasi.",
-        "updated-at": "1986-07-11T11:00:00Z"
+        "type": "Tempore aut omnis consequatur.",
+        "updated-at": "datetime"
       },
-      "id": "1500",
+      "id": "2489",
       "relationships": {
         "chart-account": {
           "data": null
         },
         "line-itemable": {
           "data": {
-            "id": "666",
+            "id": "1202",
             "type": "invoice"
           }
         }
@@ -169,7 +164,7 @@ curl -X GET \
     },
     {
       "attributes": {
-        "created-at": "1986-07-11T11:00:00Z",
+        "created-at": "datetime",
         "discount": "string",
         "end-date": "string",
         "name": "string",
@@ -179,17 +174,17 @@ curl -X GET \
         "rate": "string",
         "start-date": "string",
         "taxes": [],
-        "type": "Id.",
-        "updated-at": "1986-07-11T11:00:00Z"
+        "type": "Distinctio et beatae quis.",
+        "updated-at": "datetime"
       },
-      "id": "1501",
+      "id": "2490",
       "relationships": {
         "chart-account": {
           "data": null
         },
         "line-itemable": {
           "data": {
-            "id": "666",
+            "id": "1202",
             "type": "invoice"
           }
         }
@@ -200,7 +195,7 @@ curl -X GET \
       "attributes": {
         "category": null,
         "content-type": "string",
-        "created-at": "1986-07-11T11:00:00Z",
+        "created-at": "datetime",
         "download-url": "string",
         "filename": "string",
         "height": "integer",
@@ -208,10 +203,10 @@ curl -X GET \
         "is-uploaded": "boolean",
         "size": null,
         "token": "string",
-        "updated-at": "1986-07-11T11:00:00Z",
+        "updated-at": "datetime",
         "width": "integer"
       },
-      "id": "4478",
+      "id": "6207",
       "type": "cloud-file"
     }
   ],
@@ -230,8 +225,16 @@ curl -X GET \
 }
 ```
 
+## Example
 
-
-### HTTP Request
-
-`GET https://api.zipbooks.com/v2/invoices`
+```bash
+curl -X GET \
+     
+     -H 'accept: application/vnd.api+json' \
+     
+     -H 'content-type: application/vnd.api+json' \
+     
+     -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWxsZXIiOm51bGwsInN1YiI6IjE4OTIiLCJpc3MiOiJodHRwczpcL1wvYXBwLnppcGJvb2tzLmNvbVwvdjJcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNTY3NTQwNjAzLCJleHAiOjE1ODMwOTI2MDMsIm5iZiI6MTU2NzU0MDYwMywianRpIjoiZTM3MWFhMjgtNTEwMS00NTI5LWJkODEtMWIzZDBkN2I5ZTBiIiwic3RlYWx0aCI6ImZhbHNlIiwiYWNjb3VudF9pZCI6MjYzOSwidXBkYXRlZF9hdCI6IjIwMTktMDktMDMgMTk6NTY6NDNaIn0.z_bLPrFmbb1ZFkKBeP-mh9zXlTF3CO1vWAMTkFuaOVk' \
+     
+     "https://api.zipbooks.com/v2/invoices"
+```

@@ -4,7 +4,7 @@ Un-accepts an estimates
 
 ## Request
 
-`PATCH https://api.zipbooks.com/v2/estimates/84/unaccept`
+`PATCH https://api.zipbooks.com/v2/estimates/104/unaccept`
 
 ## Response
 
@@ -16,7 +16,7 @@ Un-accepts an estimates
   "data": {
     "attributes": {
       "archived-at": "string",
-      "created-at": "1986-07-11T11:00:00Z",
+      "created-at": "datetime",
       "currency-code": "string",
       "date": "string",
       "days-out": "integer",
@@ -45,13 +45,13 @@ Un-accepts an estimates
       "terms": "string",
       "title": "string",
       "total": "string",
-      "updated-at": "1986-07-11T11:00:00Z"
+      "updated-at": "datetime"
     },
-    "id": "84",
+    "id": "104",
     "relationships": {
       "account": {
         "data": {
-          "id": "2052",
+          "id": "2012",
           "type": "account"
         }
       },
@@ -76,7 +76,7 @@ curl -X PATCH \
      
      -H 'content-type: application/vnd.api+json' \
      
-     -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWxsZXIiOm51bGwsInN1YiI6IjE2NjMiLCJpc3MiOiJodHRwczpcL1wvYXBwLnppcGJvb2tzLmNvbVwvdjJcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNTY3NTMzMzIxLCJleHAiOjE1ODMwODUzMjEsIm5iZiI6MTU2NzUzMzMyMSwianRpIjoiMzlkMjk5ZDgtMWVhOS00OTQzLThjYWUtOTdiZDNkZDM5MTE5Iiwic3RlYWx0aCI6ImZhbHNlIiwiYWNjb3VudF9pZCI6MjA1MiwidXBkYXRlZF9hdCI6IjIwMTktMDktMDMgMTc6NTU6MjBaIn0.E3AompWkqVj0RUnll_6OvtjoxVq50G_MEUsRe8TCOzQ' \
+     -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWxsZXIiOm51bGwsInN1YiI6IjE2MTQiLCJpc3MiOiJodHRwczpcL1wvYXBwLnppcGJvb2tzLmNvbVwvdjJcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNTY3NTM5NjM2LCJleHAiOjE1ODMwOTE2MzYsIm5iZiI6MTU2NzUzOTYzNiwianRpIjoiZWUwY2FlODctOGM3ZC00YjNmLWFkY2QtMWE4MmNlOGFhN2VjIiwic3RlYWx0aCI6ImZhbHNlIiwiYWNjb3VudF9pZCI6MjAxMiwidXBkYXRlZF9hdCI6IjIwMTktMDktMDMgMTk6NDA6MzZaIn0.NfpxtZX5uylBk1BUq73up3gcQHQberGDUyiHDt_W4sE' \
      
-     "https://api.zipbooks.com/v2/estimates/84/unaccept"
+     "https://api.zipbooks.com/v2/estimates/104/unaccept"
 ```

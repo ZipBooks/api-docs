@@ -4,7 +4,7 @@ Public endpoint to un-accept an estimates
 
 ## Request
 
-`PATCH https://api.zipbooks.com/v2/public/estimates/8c1ebeb6-dfba-4b50-837b-9a033d334c3e/unaccept`
+`PATCH https://api.zipbooks.com/v2/public/estimates/2a8f92a0-b090-4cf9-9d72-4724f66f43e5/unaccept`
 
 ## Response
 
@@ -51,7 +51,7 @@ Public endpoint to un-accept an estimates
       "title": "string",
       "total": "string"
     },
-    "id": "8c1ebeb6-dfba-4b50-837b-9a033d334c3e",
+    "id": "2a8f92a0-b090-4cf9-9d72-4724f66f43e5",
     "relationships": {
       "account": {},
       "contact": {},
@@ -75,7 +75,7 @@ curl -X PATCH \
      
      -H 'content-type: application/vnd.api+json' \
      
-     -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWxsZXIiOm51bGwsInN1YiI6IjE2NjMiLCJpc3MiOiJodHRwczpcL1wvYXBwLnppcGJvb2tzLmNvbVwvdjJcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNTY3NTMzMzIwLCJleHAiOjE1ODMwODUzMjAsIm5iZiI6MTU2NzUzMzMyMCwianRpIjoiYjY3ZDM4YzQtYjEzNy00ZDFkLTk4NjMtYzRhNGVmYzYzZGViIiwic3RlYWx0aCI6ImZhbHNlIiwiYWNjb3VudF9pZCI6MjA1MiwidXBkYXRlZF9hdCI6IjIwMTktMDktMDMgMTc6NTU6MjBaIn0.ICsltsu1gRqz8Q7_DUA0GQIWvBtclJcnwNr9Brc5ytU' \
+     -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWxsZXIiOm51bGwsInN1YiI6IjE2MTQiLCJpc3MiOiJodHRwczpcL1wvYXBwLnppcGJvb2tzLmNvbVwvdjJcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNTY3NTM5NjM2LCJleHAiOjE1ODMwOTE2MzYsIm5iZiI6MTU2NzUzOTYzNiwianRpIjoiNzlmNWY0YzMtOGFkYy00NGQyLTgyNDctOTk0MjU5YjBiODdhIiwic3RlYWx0aCI6ImZhbHNlIiwiYWNjb3VudF9pZCI6MjAxMiwidXBkYXRlZF9hdCI6IjIwMTktMDktMDMgMTk6NDA6MzZaIn0.DkLSa-1CkCo7r74-obVGKunJ4YdwcpC1p32SehAygig' \
      
-     "https://api.zipbooks.com/v2/public/estimates/8c1ebeb6-dfba-4b50-837b-9a033d334c3e/unaccept"
+     "https://api.zipbooks.com/v2/public/estimates/2a8f92a0-b090-4cf9-9d72-4724f66f43e5/unaccept"
 ```

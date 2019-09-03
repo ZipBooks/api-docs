@@ -1,17 +1,19 @@
-# Invoice
 
-# Invoice Create
+
+## Create
+
+
 
 ```shell
 curl -X POST \
-     
-     -H 'accept: application/vnd.api+json' \
-     
-     -H 'content-type: application/vnd.api+json' \
-     
-     -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWxsZXIiOm51bGwsInN1YiI6IjE2NTEiLCJpc3MiOiJodHRwczpcL1wvYXBwLnppcGJvb2tzLmNvbVwvdjJcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNTY3NTMzMzE4LCJleHAiOjE1ODMwODUzMTgsIm5iZiI6MTU2NzUzMzMxOCwianRpIjoiNGY5YzEyZDQtNDMzMS00ZTkwLWE1ZWEtZTJjODQ1M2MyMGRjIiwic3RlYWx0aCI6ImZhbHNlIiwiYWNjb3VudF9pZCI6MjA0MiwidXBkYXRlZF9hdCI6IjIwMTktMDktMDMgMTc6NTU6MThaIn0.cF-uBPyssE14iHElk1wHXCnqtjtQVQ4V31nb9_QJNSc' \
-     
-     "https://api.zipbooks.com/v2/invoices"
+  
+    -H 'accept: application/vnd.api+json' \ 
+  
+    -H 'content-type: application/vnd.api+json' \ 
+  
+    -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWxsZXIiOm51bGwsInN1YiI6IjE2MTUiLCJpc3MiOiJodHRwczpcL1wvYXBwLnppcGJvb2tzLmNvbVwvdjJcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNTY3NTM5NjM2LCJleHAiOjE1ODMwOTE2MzYsIm5iZiI6MTU2NzUzOTYzNiwianRpIjoiYjFhYTc4ZTYtODk5Ny00YzBiLThjODgtYzQ3NDRiZjhlYzc4Iiwic3RlYWx0aCI6ImZhbHNlIiwiYWNjb3VudF9pZCI6MjAxMywidXBkYXRlZF9hdCI6IjIwMTktMDktMDMgMTk6NDA6MzZaIn0.PjlBH16jy82MRXkQ90CWZ8SCudotGaB1wfcLxLRGOZE' \ 
+  
+  "https://api.zipbooks.com/v2/estimates"
 ```
 
 > Example Response:
@@ -20,63 +22,55 @@ curl -X POST \
 {
   "data": {
     "attributes": {
-      "accept-credit-cards": "boolean",
-      "accept-paypal": "boolean",
       "archived-at": null,
-      "created-at": "1986-07-11T11:00:00Z",
+      "created-at": "datetime",
       "currency-code": "string",
       "date": "string",
-      "days-outstanding": null,
-      "due-date": null,
+      "days-out": "integer",
+      "discount": null,
       "external-id": "string",
-      "google-drive-id": null,
+      "history": [],
       "notes": null,
       "number": "string",
-      "paid-total": "string",
       "po-number": null,
       "sent-date": null,
-      "status": "string",
+      "status": null,
+      "subtotal": null,
       "terms": null,
       "title": null,
       "total": "string",
-      "updated-at": "1986-07-11T11:00:00Z"
+      "updated-at": "datetime"
     },
-    "id": "753",
+    "id": "105",
     "relationships": {
       "account": {
         "data": {
-          "id": "2042",
+          "id": "2013",
           "type": "account"
         }
       },
       "contact": {
         "data": {
-          "id": "1184",
+          "id": "1244",
           "type": "contact"
         }
-      },
-      "estimate": {
-        "data": null
       },
       "line-items": {
         "data": [
           {
-            "id": "1661",
+            "id": "1815",
             "type": "line-item"
           }
         ]
       },
       "logo-cloud-file": {
         "data": {
-          "id": "4822",
+          "id": "4869",
           "type": "cloud-file"
         }
-      },
-      "recurring-profile": {
-        "data": null
       }
     },
-    "type": "invoice"
+    "type": "estimate"
   },
   "included": [
     {
@@ -87,7 +81,7 @@ curl -X POST \
         "archived-at": null,
         "city": "string",
         "country": "string",
-        "created-at": "1986-07-11T11:00:00Z",
+        "created-at": "datetime",
         "department": "string",
         "display-name": "string",
         "email": "string",
@@ -107,14 +101,14 @@ curl -X POST \
         "suggested-next-invoice-number": "string",
         "unbilled-journal-entry-lines": "boolean",
         "unbilled-time-entries": "boolean",
-        "updated-at": "1986-07-11T11:00:00Z",
+        "updated-at": "datetime",
         "website": "string"
       },
-      "id": "1184",
+      "id": "1244",
       "relationships": {
         "account": {
           "data": {
-            "id": "2042",
+            "id": "2013",
             "type": "account"
           }
         },
@@ -132,8 +126,8 @@ curl -X POST \
     },
     {
       "attributes": {
-        "created-at": "1986-07-11T11:00:00Z",
-        "discount": "string",
+        "created-at": "datetime",
+        "discount": null,
         "end-date": null,
         "name": "string",
         "notes": "string",
@@ -141,25 +135,19 @@ curl -X POST \
         "quantity": "string",
         "rate": "string",
         "start-date": null,
-        "taxes": [
-          {
-            "id": "",
-            "name": null,
-            "rate": "string"
-          }
-        ],
+        "taxes": null,
         "type": "time-entry",
-        "updated-at": "1986-07-11T11:00:00Z"
+        "updated-at": "datetime"
       },
-      "id": "1661",
+      "id": "1815",
       "relationships": {
         "chart-account": {
           "data": null
         },
         "line-itemable": {
           "data": {
-            "id": "753",
-            "type": "invoice"
+            "id": "105",
+            "type": "estimate"
           }
         }
       },
@@ -169,7 +157,7 @@ curl -X POST \
       "attributes": {
         "category": null,
         "content-type": "string",
-        "created-at": "1986-07-11T11:00:00Z",
+        "created-at": "datetime",
         "download-url": null,
         "filename": "string",
         "height": "integer",
@@ -177,10 +165,10 @@ curl -X POST \
         "is-uploaded": "boolean",
         "size": null,
         "token": "string",
-        "updated-at": "1986-07-11T11:00:00Z",
+        "updated-at": "datetime",
         "width": "integer"
       },
-      "id": "4822",
+      "id": "4869",
       "type": "cloud-file"
     }
   ],
@@ -190,8 +178,8 @@ curl -X POST \
 }
 ```
 
-
-
 ### HTTP Request
 
-`POST https://api.zipbooks.com/v2/invoices`
+`POST https://api.zipbooks.com/v2/estimates`
+
+
