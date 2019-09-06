@@ -18,7 +18,7 @@
       "accept-credit-cards": "boolean",
       "accept-paypal": "boolean",
       "archived-at": null,
-      "created-at": "1986-07-11T11:00:00Z",
+      "created-at": "datetime",
       "currency-code": "string",
       "date": "string",
       "days-outstanding": null,
@@ -34,19 +34,19 @@
       "terms": null,
       "title": null,
       "total": "string",
-      "updated-at": "1986-07-11T11:00:00Z"
+      "updated-at": "datetime"
     },
-    "id": "753",
+    "id": "1250",
     "relationships": {
       "account": {
         "data": {
-          "id": "2042",
+          "id": "2716",
           "type": "account"
         }
       },
       "contact": {
         "data": {
-          "id": "1184",
+          "id": "1674",
           "type": "contact"
         }
       },
@@ -56,14 +56,14 @@
       "line-items": {
         "data": [
           {
-            "id": "1661",
+            "id": "2565",
             "type": "line-item"
           }
         ]
       },
       "logo-cloud-file": {
         "data": {
-          "id": "4822",
+          "id": "6347",
           "type": "cloud-file"
         }
       },
@@ -82,7 +82,7 @@
         "archived-at": null,
         "city": "string",
         "country": "string",
-        "created-at": "1986-07-11T11:00:00Z",
+        "created-at": "datetime",
         "department": "string",
         "display-name": "string",
         "email": "string",
@@ -102,14 +102,14 @@
         "suggested-next-invoice-number": "string",
         "unbilled-journal-entry-lines": "boolean",
         "unbilled-time-entries": "boolean",
-        "updated-at": "1986-07-11T11:00:00Z",
+        "updated-at": "datetime",
         "website": "string"
       },
-      "id": "1184",
+      "id": "1674",
       "relationships": {
         "account": {
           "data": {
-            "id": "2042",
+            "id": "2716",
             "type": "account"
           }
         },
@@ -127,7 +127,7 @@
     },
     {
       "attributes": {
-        "created-at": "1986-07-11T11:00:00Z",
+        "created-at": "datetime",
         "discount": "string",
         "end-date": null,
         "name": "string",
@@ -144,16 +144,16 @@
           }
         ],
         "type": "time-entry",
-        "updated-at": "1986-07-11T11:00:00Z"
+        "updated-at": "datetime"
       },
-      "id": "1661",
+      "id": "2565",
       "relationships": {
         "chart-account": {
           "data": null
         },
         "line-itemable": {
           "data": {
-            "id": "753",
+            "id": "1250",
             "type": "invoice"
           }
         }
@@ -164,7 +164,7 @@
       "attributes": {
         "category": null,
         "content-type": "string",
-        "created-at": "1986-07-11T11:00:00Z",
+        "created-at": "datetime",
         "download-url": null,
         "filename": "string",
         "height": "integer",
@@ -172,10 +172,10 @@
         "is-uploaded": "boolean",
         "size": null,
         "token": "string",
-        "updated-at": "1986-07-11T11:00:00Z",
+        "updated-at": "datetime",
         "width": "integer"
       },
-      "id": "4822",
+      "id": "6347",
       "type": "cloud-file"
     }
   ],
@@ -194,7 +194,7 @@ curl -X POST \
      
      -H 'content-type: application/vnd.api+json' \
      
-     -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWxsZXIiOm51bGwsInN1YiI6IjE2NTEiLCJpc3MiOiJodHRwczpcL1wvYXBwLnppcGJvb2tzLmNvbVwvdjJcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNTY3NTMzMzE4LCJleHAiOjE1ODMwODUzMTgsIm5iZiI6MTU2NzUzMzMxOCwianRpIjoiNGY5YzEyZDQtNDMzMS00ZTkwLWE1ZWEtZTJjODQ1M2MyMGRjIiwic3RlYWx0aCI6ImZhbHNlIiwiYWNjb3VudF9pZCI6MjA0MiwidXBkYXRlZF9hdCI6IjIwMTktMDktMDMgMTc6NTU6MThaIn0.cF-uBPyssE14iHElk1wHXCnqtjtQVQ4V31nb9_QJNSc' \
+     -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWxsZXIiOm51bGwsInN1YiI6IjE5MDkiLCJpc3MiOiJodHRwczpcL1wvYXBwLnppcGJvb2tzLmNvbVwvdjJcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNTY3NTQwNjEwLCJleHAiOjE1ODMwOTI2MTAsIm5iZiI6MTU2NzU0MDYxMCwianRpIjoiMTNkNmUyYzYtYTdmZS00YmVhLTljZTktNTA4NzIxMmQ4Njg1Iiwic3RlYWx0aCI6ImZhbHNlIiwiYWNjb3VudF9pZCI6MjcxNiwidXBkYXRlZF9hdCI6IjIwMTktMDktMDMgMTk6NTY6NTBaIn0.ik7lVtWPGeuDYMh8aPSVPqTxYt3F9wUNseK6262_bpg' \
      
      "https://api.zipbooks.com/v2/invoices"
 ```
