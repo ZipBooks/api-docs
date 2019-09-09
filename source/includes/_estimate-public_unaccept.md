@@ -9,8 +9,8 @@ curl -X PATCH \
   
     -H 'accept: application/vnd.api+json' \
     -H 'content-type: application/vnd.api+json' \
-    -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWxsZXIiOm51bGwsInN1YiI6IjEwMzEiLCJpc3MiOiJodHRwczpcL1wvYXBwLnppcGJvb2tzLmNvbVwvdjJcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNTY3ODEwODQ1LCJleHAiOjE1ODMzNjI4NDUsIm5iZiI6MTU2NzgxMDg0NSwianRpIjoiYjUyYWZkNDEtMjg3ZC00Mzk0LTk4MGYtODBmMWU3ODNiNWRiIiwic3RlYWx0aCI6ImZhbHNlIiwiYWNjb3VudF9pZCI6MTIzMSwidXBkYXRlZF9hdCI6IjIwMTktMDktMDYgMjM6MDA6NDVaIn0.uubVvInFdOGIZQBaLsSTpVZg5OT8o1T8hk-nnDcrlJo' \
-  "https://api.zipbooks.com/v2/public/estimates/671bedc1-5783-474d-98dc-8690b8d16991/unaccept"
+    -H 'authorization: Bearer <token>' \
+  "https://api.zipbooks.com/v2/public/estimates/891ae61a-0765-4aba-840e-eaa688d8745c/unaccept"
 ```
 
 > Example Response:
@@ -19,43 +19,43 @@ curl -X PATCH \
 {
   "data": {
     "attributes": {
-      "currency-code": "string",
-      "date": "string",
-      "days-out": "integer",
-      "discount": "string",
-      "external-id": "string",
+      "currency-code": "currency|nullable",
+      "date": "date|nullable",
+      "days-out": "integer|nullable",
+      "discount": "string|nullable",
+      "external-id": "uuid|nullable",
       "history": [
         {
-          "action": "string",
-          "created_at": "string"
+          "action": "unaccepted",
+          "created_at": "2019-09-09T17:21:28Z"
         },
         {
-          "action": "string",
-          "created_at": "string"
+          "action": "accepted",
+          "created_at": "2019-09-09T17:21:28Z"
         },
         {
-          "action": "string",
-          "created_at": "string"
+          "action": "unaccepted",
+          "created_at": "2019-09-09T17:21:28Z"
         },
         {
-          "action": "string",
-          "created_at": "string"
+          "action": "sent",
+          "created_at": "2019-09-09T17:21:28Z"
         },
         {
-          "action": "string",
-          "created_at": "string"
+          "action": "accepted",
+          "created_at": "2019-09-09T17:21:28Z"
         }
       ],
-      "notes": "string",
-      "number": "string",
-      "po-number": "string",
-      "status": "string",
-      "subtotal": null,
-      "terms": "string",
-      "title": "string",
-      "total": "string"
+      "notes": "string|nullable",
+      "number": "string|required",
+      "po-number": "string|nullable",
+      "status": "string|nullable",
+      "subtotal": "decimal|nullable",
+      "terms": "string|nullable",
+      "title": "string|nullable",
+      "total": "decimal|nullable"
     },
-    "id": "671bedc1-5783-474d-98dc-8690b8d16991",
+    "id": "1",
     "relationships": {
       "account": {},
       "contact": {},
@@ -65,13 +65,13 @@ curl -X PATCH \
     "type": "estimate"
   },
   "jsonapi": {
-    "version": "string"
+    "version": "1.0"
   }
 }
 ```
 
 ### HTTP Request
 
-`PATCH https://api.zipbooks.com/v2/public/estimates/671bedc1-5783-474d-98dc-8690b8d16991/unaccept`
+`PATCH https://api.zipbooks.com/v2/public/estimates/891ae61a-0765-4aba-840e-eaa688d8745c/unaccept`
 
 

@@ -9,8 +9,8 @@ curl -X PATCH \
   
     -H 'accept: application/vnd.api+json' \
     -H 'content-type: application/vnd.api+json' \
-    -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWxsZXIiOm51bGwsInN1YiI6IjEwMzEiLCJpc3MiOiJodHRwczpcL1wvYXBwLnppcGJvb2tzLmNvbVwvdjJcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNTY3ODEwODQ1LCJleHAiOjE1ODMzNjI4NDUsIm5iZiI6MTU2NzgxMDg0NSwianRpIjoiMDY1NGEzNzUtMzhlZi00YzgxLWIzNWUtM2FlMTE0M2Q0MzY5Iiwic3RlYWx0aCI6ImZhbHNlIiwiYWNjb3VudF9pZCI6MTIzMSwidXBkYXRlZF9hdCI6IjIwMTktMDktMDYgMjM6MDA6NDVaIn0.add-Zh--rSW8tQeGtB1-bEnOLcrWsHMGGYf01JDpL6g' \
-  "https://api.zipbooks.com/v2/estimates/41/unaccept"
+    -H 'authorization: Bearer <token>' \
+  "https://api.zipbooks.com/v2/estimates/210/unaccept"
 ```
 
 > Example Response:
@@ -19,43 +19,43 @@ curl -X PATCH \
 {
   "data": {
     "attributes": {
-      "archived-at": "string",
-      "created-at": "datetime",
-      "currency-code": "string",
-      "date": "string",
-      "days-out": "integer",
-      "discount": "string",
-      "external-id": "string",
+      "archived-at": "date_time|nullable",
+      "created-at": "date_time|readonly",
+      "currency-code": "currency|nullable",
+      "date": "date|nullable",
+      "days-out": "integer|nullable",
+      "discount": "string|nullable",
+      "external-id": "uuid|nullable",
       "history": [
         {
-          "action": "string",
-          "created_at": "string"
+          "action": "unaccepted",
+          "created_at": "2019-09-09T17:21:28Z"
         },
         {
-          "action": "string",
-          "created_at": "string"
+          "action": "sent",
+          "created_at": "2019-09-09T17:21:28Z"
         },
         {
-          "action": "string",
-          "created_at": "string"
+          "action": "accepted",
+          "created_at": "2019-09-09T17:21:28Z"
         }
       ],
-      "notes": "string",
-      "number": "string",
-      "po-number": "string",
-      "sent-date": "string",
-      "status": "string",
-      "subtotal": null,
-      "terms": "string",
-      "title": "string",
-      "total": "string",
-      "updated-at": "datetime"
+      "notes": "string|nullable",
+      "number": "string|required",
+      "po-number": "string|nullable",
+      "sent-date": "date|readonly",
+      "status": "string|nullable",
+      "subtotal": "decimal|nullable",
+      "terms": "string|nullable",
+      "title": "string|nullable",
+      "total": "decimal|nullable",
+      "updated-at": "date_time|readonly"
     },
-    "id": "41",
+    "id": "1",
     "relationships": {
       "account": {
         "data": {
-          "id": "1231",
+          "id": "1",
           "type": "account"
         }
       },
@@ -66,13 +66,13 @@ curl -X PATCH \
     "type": "estimate"
   },
   "jsonapi": {
-    "version": "string"
+    "version": "1.0"
   }
 }
 ```
 
 ### HTTP Request
 
-`PATCH https://api.zipbooks.com/v2/estimates/41/unaccept`
+`PATCH https://api.zipbooks.com/v2/estimates/210/unaccept`
 
 

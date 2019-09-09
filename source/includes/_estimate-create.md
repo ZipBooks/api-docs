@@ -1,18 +1,15 @@
 
 
-## Create
+## create
 
 
 
 ```shell
 curl -X POST \
   
-    -H 'accept: application/vnd.api+json' \ 
-  
-    -H 'content-type: application/vnd.api+json' \ 
-  
-    -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWxsZXIiOm51bGwsInN1YiI6IjE2MTUiLCJpc3MiOiJodHRwczpcL1wvYXBwLnppcGJvb2tzLmNvbVwvdjJcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNTY3NTM5NjM2LCJleHAiOjE1ODMwOTE2MzYsIm5iZiI6MTU2NzUzOTYzNiwianRpIjoiYjFhYTc4ZTYtODk5Ny00YzBiLThjODgtYzQ3NDRiZjhlYzc4Iiwic3RlYWx0aCI6ImZhbHNlIiwiYWNjb3VudF9pZCI6MjAxMywidXBkYXRlZF9hdCI6IjIwMTktMDktMDMgMTk6NDA6MzZaIn0.PjlBH16jy82MRXkQ90CWZ8SCudotGaB1wfcLxLRGOZE' \ 
-  
+    -H 'accept: application/vnd.api+json' \
+    -H 'content-type: application/vnd.api+json' \
+    -H 'authorization: Bearer <token>' \
   "https://api.zipbooks.com/v2/estimates"
 ```
 
@@ -22,50 +19,50 @@ curl -X POST \
 {
   "data": {
     "attributes": {
-      "archived-at": null,
-      "created-at": "datetime",
-      "currency-code": "string",
-      "date": "string",
-      "days-out": "integer",
-      "discount": null,
-      "external-id": "string",
+      "archived-at": "date_time|nullable",
+      "created-at": "date_time|readonly",
+      "currency-code": "currency|nullable",
+      "date": "date|nullable",
+      "days-out": "integer|nullable",
+      "discount": "string|nullable",
+      "external-id": "uuid|nullable",
       "history": [],
-      "notes": null,
-      "number": "string",
-      "po-number": null,
-      "sent-date": null,
-      "status": null,
-      "subtotal": null,
-      "terms": null,
-      "title": null,
-      "total": "string",
-      "updated-at": "datetime"
+      "notes": "string|nullable",
+      "number": "string|required",
+      "po-number": "string|nullable",
+      "sent-date": "date|readonly",
+      "status": "string|nullable",
+      "subtotal": "decimal|nullable",
+      "terms": "string|nullable",
+      "title": "string|nullable",
+      "total": "decimal|nullable",
+      "updated-at": "date_time|readonly"
     },
-    "id": "105",
+    "id": "1",
     "relationships": {
       "account": {
         "data": {
-          "id": "2013",
+          "id": "1",
           "type": "account"
         }
       },
       "contact": {
         "data": {
-          "id": "1244",
+          "id": "1",
           "type": "contact"
         }
       },
       "line-items": {
         "data": [
           {
-            "id": "1815",
+            "id": "2990",
             "type": "line-item"
           }
         ]
       },
       "logo-cloud-file": {
         "data": {
-          "id": "4869",
+          "id": "1",
           "type": "cloud-file"
         }
       }
@@ -75,40 +72,40 @@ curl -X POST \
   "included": [
     {
       "attributes": {
-        "address-1": "string",
-        "address-2": "string",
-        "allow-review-invites": "boolean",
+        "address-1": "09387 Felicity Tunnel",
+        "address-2": "Apt. 353",
+        "allow-review-invites": true,
         "archived-at": null,
-        "city": "string",
-        "country": "string",
-        "created-at": "datetime",
-        "department": "string",
-        "display-name": "string",
-        "email": "string",
-        "expenses": "string",
-        "first-name": "string",
-        "industry": "string",
-        "is-1099-required": "boolean",
-        "is-visible": "boolean",
-        "last-name": "string",
-        "name": "string",
-        "notes": "string",
-        "phone": "string",
-        "postal-code": "string",
-        "revenue": "string",
-        "state": "string",
-        "suggested-next-estimate-number": "string",
-        "suggested-next-invoice-number": "string",
-        "unbilled-journal-entry-lines": "boolean",
-        "unbilled-time-entries": "boolean",
-        "updated-at": "datetime",
-        "website": "string"
+        "city": "Borer",
+        "country": "Sao Tome and Principe",
+        "created-at": "2019-09-09T17:21:31Z",
+        "department": "Voluptas eos impedit cumque et!",
+        "display-name": "Casandra Haley",
+        "email": "jermain.damore@reichel.org",
+        "expenses": "0.00",
+        "first-name": "Casandra",
+        "industry": "Autem autem!",
+        "is-1099-required": true,
+        "is-visible": true,
+        "last-name": "Haley",
+        "name": "Elliot Goyette",
+        "notes": "Fuga sit vel!",
+        "phone": "(660) 909-9037",
+        "postal-code": "23146",
+        "revenue": "0.00",
+        "state": "GA",
+        "suggested-next-estimate-number": "2",
+        "suggested-next-invoice-number": "ELLIOT-0001",
+        "unbilled-journal-entry-lines": false,
+        "unbilled-time-entries": false,
+        "updated-at": "2019-09-09T17:21:31Z",
+        "website": "http://bosco.name"
       },
-      "id": "1244",
+      "id": "1831",
       "relationships": {
         "account": {
           "data": {
-            "id": "2013",
+            "id": "1",
             "type": "account"
           }
         },
@@ -126,27 +123,27 @@ curl -X POST \
     },
     {
       "attributes": {
-        "created-at": "datetime",
+        "created-at": "2019-09-09T17:21:31Z",
         "discount": null,
         "end-date": null,
-        "name": "string",
-        "notes": "string",
+        "name": "Cross-platform methodical internetsolution",
+        "notes": "notes",
         "order": null,
-        "quantity": "string",
-        "rate": "string",
+        "quantity": "1",
+        "rate": "22.69",
         "start-date": null,
         "taxes": null,
         "type": "time-entry",
-        "updated-at": "datetime"
+        "updated-at": "2019-09-09T17:21:31Z"
       },
-      "id": "1815",
+      "id": "2990",
       "relationships": {
         "chart-account": {
           "data": null
         },
         "line-itemable": {
           "data": {
-            "id": "105",
+            "id": "1",
             "type": "estimate"
           }
         }
@@ -156,24 +153,24 @@ curl -X POST \
     {
       "attributes": {
         "category": null,
-        "content-type": "string",
-        "created-at": "datetime",
+        "content-type": "image/png",
+        "created-at": "2019-09-09T17:21:31Z",
         "download-url": null,
-        "filename": "string",
-        "height": "integer",
-        "is-explicit": "boolean",
-        "is-uploaded": "boolean",
+        "filename": "logo.png",
+        "height": 0,
+        "is-explicit": false,
+        "is-uploaded": false,
         "size": null,
-        "token": "string",
-        "updated-at": "datetime",
-        "width": "integer"
+        "token": "05d665b3-8c36-48af-92d5-855dc743e61d",
+        "updated-at": "2019-09-09T17:21:31Z",
+        "width": 0
       },
-      "id": "4869",
+      "id": "7299",
       "type": "cloud-file"
     }
   ],
   "jsonapi": {
-    "version": "string"
+    "version": "1.0"
   }
 }
 ```
